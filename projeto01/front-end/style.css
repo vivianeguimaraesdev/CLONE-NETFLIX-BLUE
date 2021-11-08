@@ -1,0 +1,153 @@
+*{  color: #485460;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    background-color: #575FCF;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+header h2{
+    color:#FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+}
+
+
+.form-group{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+}
+.form-group1{ 
+    padding:1rem
+}
+.form-group2{ 
+    padding:1rem
+}
+
+ .styleform{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #485460;   
+  }
+
+
+#formEnviar{
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1;
+    grid-row: 3;
+    width: 124px;
+    height: 47px;
+    background-color: #2ECC71;
+    border-radius: 15px;
+    color: white;
+    border: 1px solid #2ECC71;
+    font-size: 18px;
+    font-weight: 500;
+    left: 1023px;
+    top: 314px;
+}
+#formExcluir{
+    cursor: pointer;
+    margin-top:1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1;
+    grid-row: 3;
+    width: 124px;
+    height: 47px;
+    background-color: #E50914;
+    border-radius: 15px;
+    color: white;
+    border: 1px solid #E50914;
+    font-size: 18px;
+    font-weight: 500;
+    left: 1023px;
+    top: 314px;
+}
+
+
+/* Estilização dos cards dos jogos */
+#gameCards{
+    flex-wrap: wrap;
+    display:flex;
+    flex-direction: row;
+
+
+}
+.cardSection {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cardTemplate { /* Elemento pai de cada card individual */
+    margin:1rem;  
+    width:20rem;
+    height: 20rem;
+    background-color: #2ECC71;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.cardTemplate h1{
+    margin-left: 1rem;
+    padding: 0.5rem;
+}
+
+.cardGameIMG img{
+    width: 20rem;
+}
+.cardInfoNome{
+    text-align: center;
+}
+
+.cardInfoGender {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 11rem;
+    text-align: center;
+    color:#FFFFFF;
+    background: #3C40C6;
+    font-size: 1.3rem;
+}
+
+.cardInfoNota{ 
+  
+    margin-left: 13rem; 
+    margin-top: 1.3rem;
+    position:absolute;
+    font-size: 5rem;
+
+}
+
+.cardEditButton img{
+    position: absolute;
+    margin-top: 18rem;
+    margin-left: 18rem;
+    width: 2rem;
+}
+.cardStatusConclusao{
+    padding:0.3rem
+}
+.cardStatusConclusao img{
+    position: absolute;
+    margin-left: 0.2rem;
+    width: 1.5rem;
+    
+}
+/* Fim da estilização de cards */
+

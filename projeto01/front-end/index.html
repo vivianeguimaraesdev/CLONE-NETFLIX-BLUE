@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Blue Games</title>
+</head>
+
+<body>
+    <!--HEADER CONTENT-->
+    <header>
+        <h2>Lista de Games Favoritos</h2>
+    </header>
+    <!--MAIN CONTENT-->
+    <main>
+        <section id="formsAdicionarJogo">
+            <form class="js-form">
+                <div class="form-group">
+                    <div class="form-group1">
+                        <div id="formName">
+                            <h4>Nome</h4>
+                            <input type="text" id="gameName" class="styleform" placeholder="Nome do jogo"  required>
+                        </div>
+                        <br>
+                        <div id="formImg">
+                            <h4>Imagem</h4>
+                            <input type="text" id="gameImage" class="styleform" placeholder="URL da Capa do Jogo"  required>
+                        </div>
+
+                    </div>
+                    <div class="form-group2">
+                        <div id="formGender">
+                            <h4>Gênero</h4>
+                            <input type="text" id="gameGender" class="styleform" placeholder="Insira o Gênero do Jogo" required>
+                        </div>
+                        <br>
+                        <div id="formGrade">
+                            <h4>Nota:</h4>
+                            <input type="text" id="gameGrade" class="styleform" placeholder="Nota de 0 a 10" required>
+                        </div>
+                    </div>
+
+                </div>
+                <button id="formEnviar" type="submit" value="submit">Enviar</button>
+
+            </form>
+        </section>
+        <!-- Cards teste -->
+        <div class="cardSection">
+            
+            <div id="gameCards">
+
+            </div>
+    
+        
+        </div>
+
+
+        <!-- <ul class=".js-listGames">
+            
+        </ul> -->
+
+        <!--FOOTER CONTENT-->
+    </main>
+</body>
+<script src="./scripts/home.js" defer></script>
+
+</html>
