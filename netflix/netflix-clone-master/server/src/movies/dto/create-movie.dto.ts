@@ -5,7 +5,7 @@ export class CreateMovieDto {
   name: string;
 
   @IsNotEmpty({ message: 'Campo"vazio" inválido, informe a data de lançamento do filme' })
-  @IsDate({ message: 'Campo inválido, informe uma data válida' })
+  
   year: Date;
 
   @IsNotEmpty()

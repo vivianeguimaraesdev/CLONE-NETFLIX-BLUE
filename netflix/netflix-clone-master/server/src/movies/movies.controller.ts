@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Get, Param } from '@nestjs/common';
+import { Body, Controller, Delete, Post, Get, Param } from '@nestjs/common';
 import { Movie } from '@prisma/client';
 import { CreateMovieDto } from './dto/create-movie.dto';
 import { MoviesService } from './movies.service';
@@ -20,5 +20,10 @@ export class MoviesController {
   @Get('find/:id')
   findUnique(@Param('id') id: string): Promise<Movie> {
     return this.service.findUnique(id);
+  }
+
+  @Delete('delete/:id')
+  deleteOne(@Param('id') id: string): Promise<{ message: string }> {
+    return this.service.deleteOne(id);
   }
 }

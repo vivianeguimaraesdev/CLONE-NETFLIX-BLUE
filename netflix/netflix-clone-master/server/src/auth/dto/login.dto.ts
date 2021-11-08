@@ -1,11 +1,16 @@
 /* eslint-disable prettier/prettier */
-import { IsEmail,IsString, IsNotEmpty } from 'class-validator';
+import { IsString, IsEmail, IsNotEmpty } from 'class-validator';
+import { User } from '@prisma/client';
 export class LoginDto {
-
-  @IsString()
-  @IsEmail({}, { message: 'Informe um endereço de email válido' })
+  @IsEmail()
   email: string;
 
-  @IsNotEmpty({ message: 'Campo de senha vazio, informe sua senha' })
+  @IsString()
+  @IsNotEmpty()
   password: string;
+}
+
+export class AuthResponse {
+  token: string;
+  user: User;
 }
