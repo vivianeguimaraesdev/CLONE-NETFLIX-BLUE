@@ -1,21 +1,17 @@
-/* eslint-disable prettier/prettier */
-import { IsNotEmpty, IsString,Length, IsDate } from 'class-validator';
+import { IsNotEmpty, IsUrl, IsString } from 'class-validator';
 export class CreateMovieDto {
-  @IsNotEmpty({ message: 'Campo"vazio" inválido, informe o Nome do filme' })
+  @IsString()
   name: string;
 
-  @IsNotEmpty({ message: 'Campo"vazio" inválido, informe a data de lançamento do filme' })
-  
-  year: Date;
-
-  @IsNotEmpty()
-  length: Date;
+  @IsString()
+  year: string;
 
   @IsString()
-  @Length(1, 500)
+  length: string;
+
+  @IsNotEmpty()
   storyline: string;
 
-  @IsString()
-  @IsNotEmpty()
+  @IsUrl()
   image: string;
 }

@@ -1,10 +1,11 @@
 /* eslint-disable prettier/prettier */
 
-import { Controller, Body, Post } from '@nestjs/common';
+import { Controller, Body, Post, Get, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LoginDto, AuthResponse } from './dto/login.dto';
-import  AuthUser from './auth-user.decorator';
+import AuthUser from './auth-user.decorator';
 import { User } from '@prisma/client';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('auth')
 export class AuthController {
@@ -15,8 +16,10 @@ export class AuthController {
     return this.service.login(data);
   }
 
+  //Retorna o perfil do usuário que está logado
   @Get('me')
-  me(@AuthUser() user: User): User{
+  @UseGuards(AuthGuard())
+  me(@AuthUser() user: User): User {
     return user;
   }
 }

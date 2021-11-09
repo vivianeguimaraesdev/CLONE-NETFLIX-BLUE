@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import {
   Injectable,
   NotFoundException,
@@ -36,4 +35,4 @@ export class AuthService {
       user,
     };
   }
-};
+}
